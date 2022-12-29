@@ -25,6 +25,7 @@
     padding-top:40px;
     border-bottom:1px solid black;
     padding-bottom: 70px;
+    z-index: 1;
     
 }
 .navright{
@@ -208,6 +209,7 @@ hr{
     margin-right:200px;
 }
 .section2left{
+    padding-top:120px;
     display:flex;
     flex-direction: column;
     row-gap: 8vh;
@@ -278,7 +280,14 @@ body > section.section2 > div.section2left > div > div > span > span.dp > img{
    margin-left: 20px;
 }
 .section2right{
+    padding-top:120px;
     font-family: var(--font-fam2);
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    height:300px;
+    
+
     
 }
 .section2right h4{
