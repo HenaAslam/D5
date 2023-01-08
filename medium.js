@@ -8,3 +8,26 @@ function colorChange(){
     }
 }
 window.onscroll = colorChange
+
+
+function bringM(){
+    const area=document.querySelector('.heroright')
+    fetch('/index.html')
+    .then(res=>res.text())
+    .then(data=>{
+        area.innerHTML=data
+    })
+}
+bringM()
+
+
+function mAnimation() {
+    let toggle = document.querySelectorAll("svg > g > g > g");
+    let random = Math.floor(Math.random() * toggle.length);
+    let randomly = Math.floor(Math.random() * 2);
+    toggle[random].style.opacity = randomly;
+  }
+  function toggler() {
+    setInterval(mAnimation, 50);
+  }
+  toggler();
