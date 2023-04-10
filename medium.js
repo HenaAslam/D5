@@ -21,13 +21,14 @@ function bringM(){
 bringM()
 
 
-function mAnimation() {
-    let toggle = document.querySelectorAll("svg > g > g > g");
-    let random = Math.floor(Math.random() * toggle.length);
-    let randomly = Math.floor(Math.random() * 2);
-    toggle[random].style.opacity = randomly;
+function mHideandShow() {
+    let Mnode = document.querySelectorAll("svg > g > g > g");
+    
+    let random = Math.floor(Math.random() * Mnode.length);
+    let opacity = Math.floor(Math.random() * 2);
+    Mnode[random].style.opacity = opacity;
   }
-  function toggler() {
-    setInterval(mAnimation, 50);
+  function interval() {
+    setInterval(mHideandShow, 60);
   }
-  toggler();
+  interval();
